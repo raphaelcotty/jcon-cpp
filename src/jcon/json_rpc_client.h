@@ -35,7 +35,9 @@ public:
 
     /// @return true if connection was successful
     bool connectToServer(const QString& host, int port);
+    void connectToServerAsync(const QString& host, int port);
     bool connectToServer(const QUrl& url);
+    void connectToServerAsync(const QUrl& url);
     void disconnectFromServer();
 
     bool isConnected() const;

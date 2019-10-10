@@ -193,12 +193,22 @@ bool JsonRpcClient::connectToServer(const QString& host, int port)
     return true;
 }
 
+void JsonRpcClient::connectToServerAsync(const QString& host, int port)
+{
+    m_endpoint->connectToHostAsync(host, port);
+}
+
 bool JsonRpcClient::connectToServer(const QUrl& url)
 {
     if (!m_endpoint->connectToUrl(url)) {
         return false;
     }
     return true;
+}
+
+void JsonRpcClient::connectToServerAsync(const QUrl& url)
+{
+    m_endpoint->connectToUrlAsync(url);
 }
 
 void JsonRpcClient::disconnectFromServer()
