@@ -12,7 +12,6 @@ StaticLibrary {
     Export {
         Depends { name: "cpp" }
         cpp.cxxLanguageVersion:"c++14"
-        Depends { name: "Qt"; submodules: ["core", "network", "test", "websockets"] }
         cpp.includePaths: "src"
     }
 }
